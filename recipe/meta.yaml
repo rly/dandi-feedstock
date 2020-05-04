@@ -8,9 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 70f923f27077f812fe81af053ae4ebbfbb92851833e811b967500e79e4a1ec45
-  patches:
-    # should be dropped with the next release
-    - 0001-RF-refactor-test-to-create-dedicated-script-to-run.patch
 
 build:
   number: 0
