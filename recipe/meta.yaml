@@ -40,8 +40,11 @@ requirements:
 
 test:
   requires:
-    - pytest
+    - docker-compose
     - git
+    - pytest
+    - pytest-mock
+    - responses
   imports:
     - dandi
   commands:
