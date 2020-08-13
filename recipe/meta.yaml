@@ -40,7 +40,7 @@ requirements:
 
 test:
   requires:
-    - docker-compose
+    - docker-compose  # [not win]
     - git
     - pytest
     - pytest-mock
