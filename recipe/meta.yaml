@@ -1,5 +1,5 @@
 {% set name = "dandi" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 61ce29a001475df11374d38cacab8403ba8538454b9282eb6149707129e25a50
+  sha256: fdc943c8ff5dbb5eff37d2bde6d91101dd62badc3f08cc579af721dccdfb87b3
 
 build:
   number: 0
@@ -34,14 +34,18 @@ requirements:
     - pyout
     - python-dateutil  # [py<3.7]
     - pyyaml
+    - requests >=0.22.0
     - ruamel.yaml
     - semantic_version
     - tqdm
 
 test:
   requires:
-    - pytest
+    - docker-compose  # [not win]
     - git
+    - pytest
+    - pytest-mock
+    - responses
   imports:
     - dandi
   commands:
