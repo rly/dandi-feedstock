@@ -1,5 +1,5 @@
 {% set name = "dandi" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fdc943c8ff5dbb5eff37d2bde6d91101dd62badc3f08cc579af721dccdfb87b3
+  sha256: 36d3a38e43e540bb693eb0d8437d9d489238af984d2b80062570b8e26910d2bb
 
 build:
   number: 0
@@ -26,14 +26,15 @@ requirements:
     - appdirs
     - click
     - click-didyoumean
+    - email_validator
     - etelemetry
     - humanize
     - joblib
     - keyring
     - keyrings.alt
+    - pydantic
     - pyout
-    - python-dateutil  # [py<3.7]
-    - pyyaml
+    - python-dateutil
     - requests >=0.22.0
     - ruamel.yaml
     - semantic_version
