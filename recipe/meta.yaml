@@ -26,6 +26,7 @@ requirements:
     - appdirs
     - click
     - click-didyoumean
+    - email_validator
     - etelemetry
     - humanize
     - joblib
