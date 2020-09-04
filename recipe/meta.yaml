@@ -31,9 +31,9 @@ requirements:
     - joblib
     - keyring
     - keyrings.alt
+    - pydantic
     - pyout
-    - python-dateutil  # [py<3.7]
-    - pyyaml
+    - python-dateutil
     - requests >=0.22.0
     - ruamel.yaml
     - semantic_version
