@@ -28,10 +28,13 @@ requirements:
     - click-didyoumean
     - email_validator
     - etelemetry
+    - fasteners
+    - h5py ~=2.9
     - humanize
     - joblib
     - keyring
     - keyrings.alt
+    - pycryptodomex
     - pydantic
     - pyout
     - python-dateutil
@@ -44,6 +47,7 @@ test:
   requires:
     - docker-compose  # [not win]
     - git
+    - pyfakefs
     - pytest
     - pytest-mock
     - responses
