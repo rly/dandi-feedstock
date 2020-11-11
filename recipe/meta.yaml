@@ -1,5 +1,5 @@
 {% set name = "dandi" %}
-{% set version = "0.6.4" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 36d3a38e43e540bb693eb0d8437d9d489238af984d2b80062570b8e26910d2bb
+  sha256: 421d985c104f122cb4d41bf7ec9ed74c100a234e12e2d840999ee4eaccd85267
 
 build:
   number: 0
@@ -28,10 +28,13 @@ requirements:
     - click-didyoumean
     - email_validator
     - etelemetry
+    - fasteners
+    - h5py ~=2.9
     - humanize
     - joblib
     - keyring
     - keyrings.alt
+    - pycryptodomex
     - pydantic
     - pyout
     - python-dateutil
@@ -44,6 +47,7 @@ test:
   requires:
     - docker-compose  # [not win]
     - git
+    - pyfakefs
     - pytest
     - pytest-mock
     - responses
