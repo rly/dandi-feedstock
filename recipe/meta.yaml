@@ -29,9 +29,11 @@ requirements:
     - email_validator
     - etelemetry
     - fasteners
+    - fscacher
     - h5py ~=2.9
     - humanize
     - joblib
+    - jsonschema
     - keyring
     - keyrings.alt
     - pycryptodomex
