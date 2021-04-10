@@ -1,5 +1,5 @@
 {% set name = "dandi" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e8ff2e44b695565baf16b179af92ed089396f479570ef4304354d76ca6d85c64
+  sha256: 5ce927a1f1bebbf1625fa2e6783f961677050cdb83655c7335e29e297333bb9c
 
 build:
   number: 0
   skip: true  # [py<37]
+  entry_points:
+    - dandi=dandi.cli.command:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -43,6 +45,7 @@ requirements:
     - requests >=0.22.0
     - ruamel.yaml
     - semantic_version
+    - tenacity
     - tqdm
 
 test:
