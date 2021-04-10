@@ -45,6 +45,7 @@ requirements:
     - requests >=0.22.0
     - ruamel.yaml
     - semantic_version
+    - tenacity
     - tqdm
 
 test:
