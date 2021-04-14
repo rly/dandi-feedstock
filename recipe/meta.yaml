@@ -10,7 +10,7 @@ source:
   sha256: f4f82d32ef891b10414e5885501c968164bb419d32eaa8e5d617899fcccf2221
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<37]
   entry_points:
     - dandi=dandi.cli.command:main
