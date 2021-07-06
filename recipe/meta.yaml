@@ -23,27 +23,26 @@ requirements:
     - setuptools
   run:
     - python
-    - girder-client
-    - pynwb >=1.0.3,!=1.1.0
     - appdirs
     - click
     - click-didyoumean
-    - email_validator
-    - etelemetry
+    - dandischema >=0.2.10,<0.3.0
+    - etelemetry >=0.2.0
     - fasteners
     - fscacher
-    - h5py ~=2.9
     - humanize
+    - importlib-metadata
     - joblib
-    - jsonschema
     - keyring
     - keyrings.alt
+    - packaging
     - pycryptodomex
-    - pydantic
-    - pyout
+    - pydantic >=1.8.1
+    - pynwb >=1.0.3,!=1.1.0
+    - pyout >=0.5,!=0.6.0
     - python-dateutil
-    - requests >=0.22.0
-    - ruamel.yaml
+    - requests >=2.20,<3.0
+    - ruamel.yaml >=0.15,<1
     - semantic_version
     - tenacity
     - tqdm
@@ -66,7 +65,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: Command line client for interaction with DANDI archive elements
+  summary: Command line client for interaction with DANDI Archive elements
   dev_url: https://github.com/dandi/dandi-cli
 
 extra:
