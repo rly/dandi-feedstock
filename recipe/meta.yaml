@@ -49,6 +49,7 @@ requirements:
 
 test:
   requires:
+    - anys
     - docker-compose  # [not win]
     - git
     - pyfakefs
