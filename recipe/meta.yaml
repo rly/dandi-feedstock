@@ -52,7 +52,6 @@ test:
     - anys
     - docker-compose  # [not win]
     - git
-    - pyfakefs
     - pytest
     - pytest-mock
     - responses
