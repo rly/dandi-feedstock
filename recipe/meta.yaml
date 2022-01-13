@@ -1,5 +1,5 @@
 {% set name = "dandi" %}
-{% set version = "0.33.0" %}
+{% set version = "0.34.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d601b6cae5c7c89d31aa03ddc5f724e52f03674548fcffcbb1e56e6e2593c84c
+  sha256: de087bc63ba870d863420e8728af26bf3b7377d4257ac309cd208ff1da3aef4d
 
 build:
   number: 0
@@ -52,7 +52,6 @@ test:
     - anys
     - docker-compose  # [not win]
     - git
-    - pyfakefs
     - pytest
     - pytest-mock
     - responses
