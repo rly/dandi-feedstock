@@ -32,12 +32,13 @@ requirements:
     - fscacher
     - humanize
     - importlib-metadata
+    - interleave
     - joblib
     - keyring
     - keyrings.alt
     - packaging
     - pycryptodomex
-    - pydantic >=1.8.1
+    - pydantic >=1.9.0
     - pynwb >=1.0.3,!=1.1.0
     - pyout >=0.5,!=0.6.0
     - python-dateutil
@@ -45,13 +46,14 @@ requirements:
     - ruamel.yaml >=0.15,<1
     - semantic_version
     - tenacity
-    - tqdm
+    - zarr >=2.10,<3.0
 
 test:
   requires:
     - anys
     - docker-compose  # [not win]
     - git
+    - opencv
     - pytest
     - pytest-mock
     - responses
