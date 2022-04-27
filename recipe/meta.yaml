@@ -36,6 +36,7 @@ requirements:
     - joblib
     - keyring
     - keyrings.alt
+    - nwbinspector >=0.3.8
     - packaging
     - pycryptodomex
     - pydantic >=1.9.0
