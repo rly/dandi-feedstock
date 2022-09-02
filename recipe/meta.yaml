@@ -24,6 +24,7 @@ requirements:
   run:
     - python
     - appdirs
+    - bidsschematools
     - click
     - click-didyoumean
     - dandischema >=0.7.0,<0.8.0
@@ -34,7 +35,7 @@ requirements:
     - importlib-metadata
     - interleave
     - joblib
-    - keyring
+    - keyring !=23.9.0
     - keyrings.alt
     - nwbinspector >=0.3.8
     - packaging
