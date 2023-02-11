@@ -49,6 +49,7 @@ requirements:
     - semantic_version
     - tenacity
     - zarr >=2.10,<3.0
+    - zarr-checksum
 
 test:
   requires:
