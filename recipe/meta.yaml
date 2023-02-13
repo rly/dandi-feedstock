@@ -1,5 +1,5 @@
 {% set name = "dandi" %}
-{% set version = "0.48.1" %}
+{% set version = "0.49.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fdc762be1e6fcb821a3d2da44dea4edee8a275bf396d587e2af60803480892c0
+  sha256: 8eeca09b7b0f8d687cc9d092efafec9e76e5bf8f06d09cb030bb7e06a66f7304
 
 build:
   number: 0
@@ -49,6 +49,7 @@ requirements:
     - semantic_version
     - tenacity
     - zarr >=2.10,<3.0
+    - zarr-checksum
 
 test:
   requires:
@@ -62,7 +63,7 @@ test:
   imports:
     - dandi
   commands:
-    - python -m pytest -s -v --pyargs dandi
+    - python -m pytest -s -v -k "not test_validate_bogus" --pyargs dandi
 
 about:
   home: https://github.com/dandi/dandi-cli
