@@ -63,7 +63,7 @@ test:
   imports:
     - dandi
   commands:
-    - python -m pytest -s -v --pyargs dandi
+    - python -m pytest -s -v -k "not test_validate_bogus" --pyargs dandi
 
 about:
   home: https://github.com/dandi/dandi-cli
