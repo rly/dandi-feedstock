@@ -1,5 +1,5 @@
 {% set name = "dandi" %}
-{% set version = "0.55.0" %}
+{% set version = "0.55.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 463c86e449923624c4c150f7cabae4e8d787958a09853ebd2e04bc3471a9af66
+  sha256: 773bd8295f7b8bf7e3f366a2b674e32cc28df283e0e176a23734fbf38945def1
 
 build:
   number: 0
-  skip: true  # [py<37]
+  skip: true  # [py<38]
   entry_points:
     - dandi=dandi.cli.command:main
   script: {{ PYTHON }} -m pip install . -vv
@@ -24,7 +24,7 @@ requirements:
   run:
     - python
     - appdirs
-    - bidsschematools
+    - bidsschematools >=0.7.0,<0.8.0
     - click
     - click-didyoumean
     - dandischema >=0.8.0,<0.9.0
