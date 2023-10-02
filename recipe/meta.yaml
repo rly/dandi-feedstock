@@ -54,6 +54,7 @@ requirements:
 test:
   requires:
     - anys
+    - bash >=4.5  # [not win]
     - docker-compose  # [not win]
     - git
     - opencv
