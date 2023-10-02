@@ -1,5 +1,5 @@
 {% set name = "dandi" %}
-{% set version = "0.56.0" %}
+{% set version = "0.56.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bc6993a4552dc3d532f277d93c71decffe6df03d58070dd53da780b32ea67313
+  sha256: cc28405cd2e5bc1c06adda6295fa92947926cfd90aea4de780cb8106a654eac8
 
 build:
   number: 0
@@ -54,6 +54,7 @@ requirements:
 test:
   requires:
     - anys
+    - bash >=4.5  # [not win]
     - docker-compose  # [not win]
     - git
     - opencv
