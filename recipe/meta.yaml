@@ -32,7 +32,6 @@ requirements:
     - fasteners
     - fscacher
     - humanize
-    - importlib-metadata
     - interleave
     - joblib
     - keyring !=23.9.0
@@ -61,7 +60,7 @@ test:
     - pytest
     - pytest-mock
     - pytest-rerunfailures
-    - responses
+    - responses !=0.24.0
     - vcrpy
   imports:
     - dandi
