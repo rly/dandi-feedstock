@@ -1,5 +1,5 @@
 {% set name = "dandi" %}
-{% set version = "0.58.0" %}
+{% set version = "0.58.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5680be06c2c0724ed0d6e15507bb6c152bef3b1f989bce28faa7b6ba5438a704
+  sha256: 1287162192b60ea366f5916548b8e8760da65e564dc48107436b3cd92402f7bd
 
 build:
   number: 0
@@ -23,9 +23,8 @@ requirements:
     - setuptools
   run:
     - python
-    - appdirs
     - bidsschematools >=0.7.0,<0.8.0
-    - click
+    - click >=7.1
     - click-didyoumean
     - dandischema >=0.8.0,<0.9.0
     - etelemetry >=0.2.0
@@ -38,6 +37,7 @@ requirements:
     - keyrings.alt
     - nwbinspector >=0.4.28
     - packaging
+    - platformdirs
     - pycryptodomex
     - pydantic >=1.9.0
     - pynwb >=1.0.3,!=1.1.0
@@ -48,7 +48,7 @@ requirements:
     - semantic_version
     - tenacity
     - zarr >=2.10,<3.0
-    - zarr-checksum
+    - zarr-checksum >=0.2.11,<0.3
 
 test:
   requires:
