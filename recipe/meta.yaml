@@ -1,5 +1,5 @@
 {% set name = "dandi" %}
-{% set version = "0.59.0" %}
+{% set version = "0.59.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 643b90c433ceaf9ee088a03493d453756b338a5d887dd95a5e22b609e3f4a0c1
+  sha256: ed33b6d7b106644c7c55625ae3a3ebdb91fecffa7132e1289e477bc23726067a
 
 build:
   number: 0
@@ -35,7 +35,7 @@ requirements:
     - joblib
     - keyring !=23.9.0
     - keyrings.alt
-    - nwbinspector >=0.4.28
+    - nwbinspector >=0.4.28,!=0.4.32
     - packaging
     - platformdirs
     - pycryptodomex
@@ -48,7 +48,7 @@ requirements:
     - semantic_version
     - tenacity
     - zarr >=2.10,<3.0
-    - zarr-checksum >=0.2.11,<0.3
+    - zarr-checksum >=0.4.0,<0.5
 
 test:
   requires:
