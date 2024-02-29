@@ -1,5 +1,5 @@
 {% set name = "dandi" %}
-{% set version = "0.59.1" %}
+{% set version = "0.60.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ed33b6d7b106644c7c55625ae3a3ebdb91fecffa7132e1289e477bc23726067a
+  sha256: d83c8e182896fd845108c2869f0f54807d4945341de495f3866ed330154d75d4
 
 build:
   number: 0
@@ -26,7 +26,7 @@ requirements:
     - bidsschematools >=0.7.0,<0.8.0
     - click >=7.1
     - click-didyoumean
-    - dandischema >=0.8.0,<0.9.0
+    - dandischema >=0.9.0,<0.11.0
     - etelemetry >=0.2.0
     - fasteners
     - fscacher
@@ -39,7 +39,7 @@ requirements:
     - packaging
     - platformdirs
     - pycryptodomex
-    - pydantic >=1.9.0
+    - pydantic >=2.0,<3.0
     - pynwb >=1.0.3,!=1.1.0
     - pyout >=0.5,!=0.6.0
     - python-dateutil
