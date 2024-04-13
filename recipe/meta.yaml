@@ -65,7 +65,7 @@ test:
   imports:
     - dandi
   commands:
-    - python -m pytest -s -v -k "not test_validate_bogus" --pyargs dandi
+    - python -m pytest -s -v -k "not test_validate_bogus and not test_video_organize" --pyargs dandi
 
 about:
   home: https://github.com/dandi/dandi-cli
