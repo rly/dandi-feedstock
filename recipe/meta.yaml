@@ -10,7 +10,7 @@ source:
   sha256: 525026de7076e136df58ee97ea90b893fb107d3f597101ce153af89c216ebb2b
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<38]
   entry_points:
     - dandi=dandi.cli.command:main
@@ -58,6 +58,7 @@ test:
     - docker-compose  # [not win]
     - git
     - opencv
+    - libopencv *=headless*  # [linux]
     - pytest
     - pytest-mock
     - pytest-rerunfailures
@@ -66,7 +67,7 @@ test:
   imports:
     - dandi
   commands:
-    - python -m pytest -s -v -k "not test_validate_bogus and not test_video_organize" --pyargs dandi
+    - python -m pytest -s -v -k "not test_validate_bogus" --pyargs dandi
 
 about:
   home: https://github.com/dandi/dandi-cli
