@@ -58,7 +58,7 @@ test:
     - docker-compose  # [not win]
     - git
     - opencv
-    - libopencv *=headless*
+    - libopencv =*=headless*
     - pytest
     - pytest-mock
     - pytest-rerunfailures
