@@ -57,7 +57,7 @@ test:
     - bash >=4.5  # [not win]
     - docker-compose  # [not win]
     - git
-    - opencv =*=headless*
+    - opencv *=headless*
     - pytest
     - pytest-mock
     - pytest-rerunfailures
