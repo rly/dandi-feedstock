@@ -1,5 +1,5 @@
 {% set name = "dandi" %}
-{% set version = "0.62.2" %}
+{% set version = "0.62.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e9afc291ff720f3fa4c104c0698d28565acc23d37ab24fedc3f2c41f515c50dd
+  sha256: 04ffc6e07d7e971f9be954f924846c4b266b0d7a0ac3a8d0121d0fe744f27ea4
 
 build:
   number: 0
@@ -26,7 +26,7 @@ requirements:
     - bidsschematools >=0.7.0,<0.8.0
     - click >=7.1
     - click-didyoumean
-    - dandischema >=0.9.0,<0.11.0
+    - dandischema >=0.9.0,<0.10.2
     - etelemetry >=0.2.0
     - fasteners
     - fscacher
