@@ -10,13 +10,16 @@ source:
   sha256: 3e785d49d76231fa942559af1ba25b7ab61302378b4bbe497d9a651bc8e8e085
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<38]
   entry_points:
     - dandi=dandi.cli.command:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
+  build:
+    - python                              # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
   host:
     - python
     - pip
